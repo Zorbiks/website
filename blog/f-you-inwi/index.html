@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="stylesheet" href="/css/main.css">
+    
+        <link rel="stylesheet" href="/css/blog.css">
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/fontawesome.min.css" integrity="sha512-J2Gce+WmOttffHOrVKLTlzxIalPXUMDbSfn5ADqp8Vj9EngnjNHr+jjiL3ZB8muEzo+K51gU10X+0eGqGNL7QA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/brands.min.css" integrity="sha512-mXqwRsOznG7CS37KA7CLR1Fc72gfOgp7r8xaVdBKoBKhitcKI/mK+IamtZUf+FAkufXOvVTESu9lPsoQc+kFxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/solid.min.css" integrity="sha512-SRwBRtvmT+LZLST1GBrRec8GROqtjKU1NK23RKSpdL6IRzn2xPeOfBYSeIlc/9iXYagKB5IX6MyKZF1nq4a1fw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<title>Zorbiks&#39; Blog</title>
+
+    </head>
+    <body>
+
+        <nav>
+    <div class="container">
+        <a class="logo" href="/">
+            <h1>Zorbiks&#39; Blog</h1>
+        </a>
+        <ul class="links">
+            
+            
+                <li>
+                    <a
+                        class=""
+                        href="/whoami/">
+                            whoami
+                    </a>
+                </li>
+            
+
+            
+        </ul>
+    </div>
+</nav>
+
+
+        <main>
+            <div class="container">
+                
+    <article>
+        <a class="back-btn" href="/">
+            <i class="fa-solid fa-caret-left"></i>Back
+        </a>
+        <h1 class="blog-title">F@#$ You Inwi</h1>
+        <div class="date">29 August, 2025 - 15:07</div>
+        <div class="img-wrapper">
+            <img src="/images/inwi.jpg" alt=".Params.imageAlt">
+        </div>
+        <p>I was happy that I could switch from a 12 Mbps ADSL connection to a 20 Mbps fiber optics. It was refreshing, although the speed wasn’t particularly impressive. still, for the same price I would definitely make the switch. At the time, Inwi was the only provider offering fiber optics in my area, so I switched like any sane person did. After a few months of use, problems began to appear. People told me that Inwi is a good company, but I didn’t realize I was simply talking to folks who use fiber optics for entertainment only. They aren’t tech‑savvy; all they know is that the internet is Google, cloud storage is in the air, and ChatGPT is a miracle.</p>
+<p>Well, you may ask me, &ldquo;What’s wrong with it?&rdquo; I will tell you exactly what is wrong with it.</p>
+<h2 id="router">Router</h2>
+<p>I’m not really sure about it. However, the router I received wasn’t an Inwi router, it was a made by a company called Fiberhome. I can’t tell whether that was just my experience or if the whole offer was like this. What I can confirm is that the router is complete garbage. it’s probably the worst router I’ve ever used.</p>
+<h2 id="fake-admin-account">Fake Admin Account</h2>
+<p>When the setup was finally finished, they gave me the admin username and password so I could log into the Wi‑Fi configuration page (to change the password or the SSID). So far, so good.</p>
+<p>But at one point I wanted more. I looked at the settings and noticed many options that were missing compared to my old router. I was disappointed. After doing some research, I was shocked to discover that the &ldquo;admin&rdquo; account is actually just a regular user. There’s another true admin account that has access to all the router’s settings. And if you think that’s normal, wait until you hear about the next part, which is really frustrating.</p>
+<h2 id="port-isolation">Port Isolation</h2>
+<p>I’m not going to explain what port isolation is. You can look it up yourself because it’s too technical, and I don’t understand networking that well. However, I will tell you about the side effects it had on me.</p>
+<p>Basically, on my router, port isolation makes it so that all the devices connected wirelessly can communicate with each other, but they cannot communicate with devices like a desktop PC that are connected via Ethernet cable. The reverse is also true. Wired devices can talk to one another but not to devices that are connected wirelessly, such as mobile phones. This is a big problem. It might be acceptable in a corporate environment, but for home users it’s terrible. if you have a wireless printer, you can’t use it from a desktop PC.</p>
+<p>You might think that going into the settings and disabling this option is the solution, right? Yes, that works on most sane routers. I use the word &ldquo;sane&rdquo; here because what you’re about to see next is insane.</p>
+<h2 id="hidden-options">Hidden Options</h2>
+<p>If you search through all of the settings, you’ll find nothing to disable port isolation. I did some research and discovered that other similar models show the option on the page shown in the image below. But, to make it appear on those models you have to hack into the router with netcat. I can&rsquo;t do that because netcat is disable on my model for some reason.</p>
+<div class="img-wrapper">
+    <img src="/images/port-isolation-option-before.jpg" alt="Network settings before editing the html" />
+  </div><p>So I thought to myself, &ldquo;Let’s inspect the HTML,&rdquo; and oh boy look what I found. The option to disable port isolation was hidden with an inline CSS style <code>display: none;</code>. I was surprised, but I was also happy because I thought I’d solved it&hellip; right? WRONG! This HTML serves no purpose at all. Even if you change the style to <code>display: block;</code>, flip the switch, and click Apply, nothing happens. The page simply refreshes.</p>
+<div class="img-wrapper">
+    <img src="/images/router-page-html-source-code-after.jpg" alt="Network settings HTML source code" />
+  </div><div class="img-wrapper">
+    <img src="/images/port-isolation-option-after.jpg" alt="Network settings after editing the html" />
+  </div><p>So, here I am stuck with this nonsense, and you can easily tell me to just replace the router. I wish it were that simple, but the ISP won’t change the router for free, and I don’t have the time nor the money for it.</p>
+<p>psst hire me.</p>
+<h2 id="the-moral-of-the-story">The Moral of the Story</h2>
+<p><strong>Fuck Inwi</strong></p>
+
+    </article>
+
+            </div>
+        </main>
+
+        <footer>
+    <div class="container">
+        <p>
+            MADE WITH HATE ⚡️ &copy; 2025
+        </p>
+    </div>
+</footer>
+
+        
+    </body>
+</html>

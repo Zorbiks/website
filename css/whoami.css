@@ -1,0 +1,74 @@
+.cv {
+    display: grid;
+    gap: 2rem;
+    background-color: var(--bg-main);
+    padding: 1rem;
+}
+
+.cv .section-title {
+    margin-bottom: 1rem;
+}
+
+.cv .education .educational-experience {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    background-color: var(--bg-secondary);
+    padding: 1rem;
+    border-left: 2px solid var(--primary-color);
+    border-radius: .25rem;
+}
+
+.cv .list-cards {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.cv .list-cards li {
+    padding: .5rem 1rem;
+    background-color: var(--bg-secondary);
+}
+
+.cv .project {
+    background-color: var(--bg-secondary);
+    padding: 1rem;
+    border-left: 2px solid var(--primary-color);
+    border-radius: .25rem;
+}
+
+.cv .project .project-title {
+    font-size: 1.25rem;
+    margin-bottom: .75rem;
+}
+
+.cv .project .project-desc {
+    margin-bottom: .75rem;
+}
+
+/* Coloring fontawesome icons */
+.html {
+    color: #f22601;
+}
+
+.css {
+    color: #663399;
+}
+
+.js {
+    color: #f7e018;
+}
+
+.bootstrap {
+    color: #8a13fa;
+}
+
+.php {
+    color: #6e81b6;
+}
+
+.sql {
+    color: #aaa;
+}

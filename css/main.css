@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-main: #eee;
+    --text-secondary: #999;
+
+    --primary-color: hsl(103, 31%, 67%);
+
+    --bg-main: hsl(227, 31%,8%);
+    --bg-secondary: hsl(227, 31%,12%);
+
+    --link-main: hsl(103, 31%, 67%);
+    --link-hover: hsl(103, 31%, 60%);
+    --link-active: hsl(103, 31%, 50%);
+    --link-visited: hsl(103, 31%, 50%);
+}
+
+body {
+    font-family: sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-main);
+    background-image: url("/images/background.png");
+    background-blend-mode: screen;
+}
+
+a {
+    color: var(--link-main)
+}
+
+a:hover {
+    color: var(--link-hover)
+}
+
+a:active {
+
+    color: var(--link-active)
+}
+
+a:visited {
+    color: var(--link-visited)
+}
+
+.container {
+    max-width: 800px;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+a.back-btn {
+    text-decoration: none !important;
+    color: var(--text-secondary);
+}
+
+a.back-btn:hover {
+    color: var(--text-main);
+}
+
+nav {
+    background-color: var(--bg-secondary);
+    /* padding: 1rem 0; */
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    margin: 0;
+    text-align: center;
+}
+
+nav .logo {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+nav .links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+nav .links a {
+    position: relative;
+    text-decoration: none;
+    display: block;
+    padding: 1.25rem .25rem;
+    color: var(--text-secondary);
+    transition: color .25s ease-in-out;
+}
+
+nav .links a.active,
+nav .links a:hover {
+    color: var(--text-main);
+}
+
+nav .links a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width .25s ease-in-out;
+}
+
+nav .links a.active::before,
+nav .links a:hover::before {
+    width: 100%;
+}
+
+main {
+    margin: 1rem 0;
+}
+
+footer {
+    background-color: var(--bg-secondary);
+    padding: 1rem 0;
+}
+
+footer {
+    text-align: center;
+}

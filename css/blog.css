@@ -1,0 +1,47 @@
+article {
+    background-color: var(--bg-main);
+    padding: 2rem;
+}
+
+@media (max-width: 500px) {
+    article {
+        padding: 2rem 1rem;
+    }
+
+    main .container {
+        padding: 0;
+    }
+}
+
+article .date {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+article .blog-title {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+article .img-wrapper {
+    margin: 1rem 0;
+}
+
+article .img-wrapper img {
+    display: inline-block;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 0.25rem;
+}
+
+article p {
+    line-height: 1.6;
+    margin: 1rem 0;
+    text-align: justify;
+}
+
+article h2,
+article h3 {
+    margin: 1rem 0;
+}

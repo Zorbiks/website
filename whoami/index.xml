@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>whoami on Zorbiks&#39; Blog</title>
+    <link>https://zorbiks.vercel.app/whoami/</link>
+    <description>Recent content in whoami on Zorbiks&#39; Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://zorbiks.vercel.app/whoami/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
