@@ -1,5 +1,5 @@
 article {
-    background-color: var(--bg-main);
+    background-color: var(--color-bg-secondary);
     padding: 2rem;
 }
 
@@ -13,14 +13,36 @@ article {
     }
 }
 
-article .date {
-    color: var(--text-secondary);
-    margin-bottom: 1rem;
+article .metadata {
+    display: flex;
+    gap: 1rem;
+    color: var(--color-text-muted);
+}
+
+article .metadata .reading-time,
+article .metadata .word-count,
+article .metadata time {
+    padding: 0.25rem .5rem;
+    border-radius: 0.25rem;
+}
+
+article .metadata .reading-time {
+    background-color: var(--color-notice);
+}
+
+article .metadata .word-count {
+    background-color: var(--color-highlight);
+}
+
+article .metadata time {
+    display: inline-block;
+    background-color: var(--color-special);
 }
 
 article .blog-title {
     font-size: 2rem;
     margin: 1rem 0;
+    color: var(--color-text-primary);
 }
 
 article .img-wrapper {
@@ -39,9 +61,11 @@ article p {
     line-height: 1.6;
     margin: 1rem 0;
     text-align: justify;
+    color: var(--color-text-secondary);
 }
 
 article h2,
 article h3 {
+    color: var(--color-text-primary);
     margin: 1rem 0;
 }
