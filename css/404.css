@@ -1,0 +1,19 @@
+body {
+    background-image: none;
+}
+
+main {
+    padding: 5rem 0;
+}
+
+.content-wrapper {
+    text-align: center;
+}
+
+.content-wrapper h1 {
+    margin-bottom: 1rem;
+}
+
+.ascii-art {
+    margin-bottom: 1rem;
+}
