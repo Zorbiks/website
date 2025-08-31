@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr" data-theme="light">
+<html lang="en-us" dir="ltr" data-theme="dark">
     <head>
 	<meta name="generator" content="Hugo 0.148.2">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,8 +32,16 @@
 
 <title>Zorbiks&#39; Blog</title>
 
+        <script>
+            
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        </script>
     </head>
     <body>
+        <div class="flashbang" id="flashbang"></div>
 
         <nav>
     <div class="container">
@@ -131,6 +139,6 @@
         
             <script src="/js/glow.js"></script>
         
-        <script src="/js/theme.js"></script>
+        <script defer src="/js/theme.js"></script>
     </body>
 </html>

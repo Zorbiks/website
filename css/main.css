@@ -28,10 +28,9 @@
     --color-danger: var(--accent-1);
     --color-info: var(--accent-6);
     --color-accent: var(--accent-3);
-
 }
 
-:root[data-theme=dark] {
+:root[data-theme="dark"] {
     /* Backgrounds */
     --bg-primary: #1e1e2e;
     --bg-secondary: #313244;
@@ -48,6 +47,39 @@ body {
     background-color: var(--bg-primary);
     background-image: url("/images/background.png");
     background-blend-mode: screen;
+}
+
+.flashbang {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-primary);
+    z-index: 99;
+    opacity: 0;
+    display: none;
+}
+
+.flashbang.active {
+    display: block;
+}
+
+.fadeout {
+    animation-name: fadeout;
+    animation-timing-function: ease;
+    animation-duration: 1.5s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        display: none;
+    }
 }
 
 a {
@@ -158,8 +190,11 @@ nav .links .toggle-label {
     right: 0;
     bottom: 0;
     background-color: var(--bg-tertiary);
-    transition: background-color 0.2s;
     border-radius: 34px;
+}
+
+nav .links .toggle-label.animate {
+    transition: background-color 0.2s;
 }
 
 nav .links .toggle-label:before {
@@ -170,7 +205,6 @@ nav .links .toggle-label:before {
     left: 4px;
     bottom: 4px;
     background-color: white;
-    transition: transform 0.2s;
     border-radius: 50%;
 }
 
@@ -180,6 +214,10 @@ nav .links .toggle-input:checked + .toggle-label {
 
 nav .links .toggle-input:checked + .toggle-label:before {
     transform: translateX(24px);
+}
+
+nav .links .toggle-input.animate + .toggle-label:before {
+    transition: transform 0.2s;
 }
 
 main {

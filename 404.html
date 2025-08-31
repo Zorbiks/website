@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr" data-theme="light">
+<html lang="en-us" dir="ltr" data-theme="dark">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta charset="UTF-8">
@@ -31,8 +31,16 @@
 
 <title>Zorbiks&#39; Blog - 404 Page not found</title>
 
+        <script>
+            
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        </script>
     </head>
     <body>
+        <div class="flashbang" id="flashbang"></div>
 
         <nav>
     <div class="container">
@@ -99,6 +107,6 @@
 </footer>
 
         
-        <script src="/js/theme.js"></script>
+        <script defer src="/js/theme.js"></script>
     </body>
 </html>
