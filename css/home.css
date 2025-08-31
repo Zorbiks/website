@@ -16,7 +16,7 @@
     border-radius: 0.25rem;
     padding: 2px;
     overflow: hidden;
-    background-color: var(--color-bg-secondary);
+    background-color: var(--bg-secondary);
     border-radius: 0.25rem;
 }
 
@@ -43,7 +43,7 @@
     padding: 1rem;
     transition: box-shadow 0.2s ease-in-out;
     overflow: hidden;
-    background-color: var(--color-bg-secondary);
+    background-color: var(--bg-secondary);
     border-radius: 0.25rem;
 }
 
@@ -65,7 +65,7 @@
 
 .article-card-preview .title {
     margin-bottom: 1rem;
-    color: var(--color-text-primary);
+    color: var(--text-primary);
     transition: color 0.2s ease-in-out;
 }
 
@@ -74,7 +74,7 @@
 }
 
 .article-card-preview .preview {
-    color: var(--color-text-secondary);
+    color: var(--text-secondary);
     margin-bottom: 1rem;
     line-height: 1.6;
 }
@@ -83,7 +83,7 @@
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
-    color: var(--color-text-muted);
+    color: var(--bg-primary);
 }
 
 .article-card-preview .metadata .reading-time,
@@ -94,14 +94,14 @@
 }
 
 .article-card-preview .metadata .reading-time {
-    background-color: var(--color-notice);
+    background-color: var(--color-info);
 }
 
 .article-card-preview .metadata .word-count {
-    background-color: var(--color-highlight);
+    background-color: var(--color-warning);
 }
 
 .article-card-preview .metadata time {
     display: inline-block;
-    background-color: var(--color-special);
+    background-color: var(--color-success);
 }

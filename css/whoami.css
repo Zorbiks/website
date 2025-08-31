@@ -1,7 +1,7 @@
 .cv {
     display: grid;
     gap: 2rem;
-    background-color: var(--color-bg-secondary);
+    background-color: var(--bg-secondary);
     padding: 1rem;
 }
 
@@ -14,7 +14,7 @@
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: space-between;
-    background-color: var(--color-bg-primary);
+    background-color: var(--bg-primary);
     padding: 1rem;
     border-left: 2px solid var(--color-accent);
     border-radius: .25rem;
@@ -29,11 +29,11 @@
 
 .cv .list-cards li {
     padding: .5rem 1rem;
-    background-color: var(--color-bg-primary);
+    background-color: var(--bg-primary);
 }
 
 .cv .project {
-    background-color: var(--color-bg-primary);
+    background-color: var(--bg-primary);
     padding: 1rem;
     border-left: 2px solid var(--color-accent);
     border-radius: .25rem;
@@ -46,7 +46,7 @@
 
 .cv .project .project-desc {
     margin-bottom: .75rem;
-    color: var(--color-text-secondary);
+    color: var(--text-secondary);
 }
 
 /* Coloring fontawesome icons */

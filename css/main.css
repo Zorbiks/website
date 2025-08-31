@@ -6,39 +6,46 @@
 
 :root {
     /* Backgrounds */
-    --color-bg-primary: #1e1e2e; /* Base */
-    --color-bg-secondary: #181825; /* Mantle */
-     /* Crust */
+    --bg-primary: #eff1f5;
+    --bg-secondary: #dfe3eb;
+    --bg-tertiary: #c0c8d8;
 
-    /* Text colors */
-    --color-text-primary: #cdd6f4; /* Text */
-    --color-text-secondary: #a6adc8; /* Subtext1 */
-    --color-text-tertiary: #9399b2; /* Subtext0 */
-    --color-text-muted: #11111b; /* Overlay1 */
+    /* Text */
+    --text-primary: #4c4f69;
+    --text-secondary: #5c6076;
 
-    /* Borders and surfaces */
-    --color-border: #45475a; /* Surface1 */
-    --color-surface: #313244; /* Surface0 */
+    /* Accent colors */
+    --accent-1: #d20f39;
+    --accent-2: #40a02b;
+    --accent-3: #df8e1d;
+    --accent-4: #0f80d5;
+    --accent-5: #8839ef;
+    --accent-6: #179299;
 
-    /* Accents / UI States */
-    --color-accent: #89b4fa; /* Blue */
-    --color-accent-hover: #74c7ec; /* Sky */
-    --color-accent-muted: #89dceb; /* Sapphire */
+    /* Semantic tokens */
+    --color-success: var(--accent-2);
+    --color-warning: var(--accent-3);
+    --color-danger: var(--accent-1);
+    --color-info: var(--accent-6);
+    --color-accent: var(--accent-3);
 
-    --color-success: #a6e3a1; /* Green */
-    --color-warning: #f9e2af; /* Yellow */
-    --color-danger: #f38ba8; /* Red */
-    --color-info: #94e2d5; /* Teal */
+}
 
-    --color-notice: #fab387; /* Peach */
-    --color-special: #cba6f7; /* Mauve */
-    --color-highlight: #f5c2e7; /* Pink */
+:root[data-theme=dark] {
+    /* Backgrounds */
+    --bg-primary: #1e1e2e;
+    --bg-secondary: #313244;
+    --bg-tertiary: #616587;
+
+    /* Text */
+    --text-primary: #eff1f5;
+    --text-secondary: #ccd0da;
 }
 
 body {
     font-family: sans-serif;
-    color: var(--color-text-primary);
-    background-color: var(--color-bg-primary);
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
     background-image: url("/images/background.png");
     background-blend-mode: screen;
 }
@@ -48,12 +55,12 @@ a {
 }
 
 a:hover {
-    color: var(--color-accent-hover);
+    color: var(--color-accent);
 }
 
 a:active,
 a:visited {
-    color: var(--color-accent-muted);
+    color: var(--color-accent);
 }
 
 .container {
@@ -64,17 +71,16 @@ a:visited {
 
 a.back-btn {
     text-decoration: none !important;
-    color: var(--color-text-tertiary);
+    color: var(--text-secondary);
     transition: color 0.25s ease-in-out;
 }
 
 a.back-btn:hover {
-    color: var(--color-text-secondary);
-
+    color: var(--text-primary);
 }
 
 nav {
-    background-color: var(--color-bg-secondary);
+    background-color: var(--bg-secondary);
 }
 
 nav .container {
@@ -95,6 +101,7 @@ nav .logo {
 
 nav .links {
     display: flex;
+    align-items: center;
     list-style: none;
     gap: 1rem;
 }
@@ -104,13 +111,13 @@ nav .links a {
     text-decoration: none;
     display: block;
     padding: 1.25rem 0.25rem;
-    color: var(--color-text-secondary);
+    color: var(--text-secondary);
     transition: color 0.25s ease-in-out;
 }
 
 nav .links a.active,
 nav .links a:hover {
-    color: var(--color-text-primary);
+    color: var(--text-primary);
 }
 
 nav .links a::before {
@@ -130,12 +137,57 @@ nav .links a:hover::before {
     width: 100%;
 }
 
+nav .links .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+
+nav .links .toggle-input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+nav .links .toggle-label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-tertiary);
+    transition: background-color 0.2s;
+    border-radius: 34px;
+}
+
+nav .links .toggle-label:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: transform 0.2s;
+    border-radius: 50%;
+}
+
+nav .links .toggle-input:checked + .toggle-label {
+    background-color: var(--accent-4);
+}
+
+nav .links .toggle-input:checked + .toggle-label:before {
+    transform: translateX(24px);
+}
+
 main {
     margin: 1rem 0;
 }
 
 footer {
-    background-color: var(--color-bg-secondary);
+    background-color: var(--bg-secondary);
     padding: 1rem 0;
 }
 

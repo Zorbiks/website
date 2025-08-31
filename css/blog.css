@@ -1,5 +1,5 @@
 article {
-    background-color: var(--color-bg-secondary);
+    background-color: var(--bg-secondary);
     padding: 2rem;
 }
 
@@ -16,7 +16,7 @@ article {
 article .metadata {
     display: flex;
     gap: 1rem;
-    color: var(--color-text-muted);
+    color: var(--bg-primary);
 }
 
 article .metadata .reading-time,
@@ -27,22 +27,22 @@ article .metadata time {
 }
 
 article .metadata .reading-time {
-    background-color: var(--color-notice);
+    background-color: var(--color-info);
 }
 
 article .metadata .word-count {
-    background-color: var(--color-highlight);
+    background-color: var(--color-warning);
 }
 
 article .metadata time {
     display: inline-block;
-    background-color: var(--color-special);
+    background-color: var(--color-success);
 }
 
 article .blog-title {
     font-size: 2rem;
     margin: 1rem 0;
-    color: var(--color-text-primary);
+    color: var(--text-primary);
 }
 
 article .img-wrapper {
@@ -61,11 +61,11 @@ article p {
     line-height: 1.6;
     margin: 1rem 0;
     text-align: justify;
-    color: var(--color-text-secondary);
+    color: var(--text-secondary);
 }
 
 article h2,
 article h3 {
-    color: var(--color-text-primary);
+    color: var(--text-primary);
     margin: 1rem 0;
 }

@@ -7,7 +7,9 @@ main {
 }
 
 .content-wrapper {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .content-wrapper h1 {
